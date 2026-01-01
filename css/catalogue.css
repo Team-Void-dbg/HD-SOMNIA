@@ -1,0 +1,275 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: url("../assets/bg_hdsomnia.webp"), linear-gradient(90deg, rgb(255, 51, 0), rgb(0, 255, 76));
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.book-container {
+    perspective: 2000px;
+    position: relative;
+}
+
+.book-cover {
+    background: linear-gradient(135deg, #ff0080 0%, #f35c05 50%, #fd0000 100%);
+    width: 400px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    transition: all 0.5s ease;
+    color: white;
+    text-align: center;
+    padding: 40px;
+}
+
+.book-cover h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.subtitle {
+    font-size: 1.3em;
+    margin-bottom: 40px;
+    opacity: 0.9;
+}
+
+.open-book {
+    background: white;
+    color: #ff0000;
+    border: none;
+    padding: 15px 40px;
+    font-size: 1.2em;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.open-book:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.book {
+    display: none;
+    width: 900px;
+    height: 600px;
+    position: relative;
+    transform-style: preserve-3d;
+    background: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.book.active {
+    display: flex;
+    animation: openBook 0.8s ease forwards;
+}
+
+@keyframes openBook {
+    from {
+        opacity: 0;
+        transform: scale(0.8) rotateY(-30deg);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) rotateY(0);
+    }
+}
+
+.page {
+    width: 50%;
+    height: 100%;
+    padding: 40px;
+    display: none;
+    background: white;
+    position: relative;
+}
+
+.page.active {
+    display: block;
+    animation: pageFlip 0.6s ease;
+}
+
+@keyframes pageFlip {
+    0% {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.page-left {
+    border-right: 1px solid #ddd;
+    border-radius: 10px 0 0 10px;
+}
+
+.page-right {
+    border-radius: 0 10px 10px 0;
+}
+
+.page-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.product-card {
+    text-align: center;
+}
+
+.product-image {
+    font-size: 6em;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.2));
+}
+
+.product-card h2 {
+    font-size: 2em;
+    margin-bottom: 15px;
+    background: linear-gradient(135deg, #ff6b6b, #ffa500, #4ecdc4, #95e1d3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.product-card p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.badge {
+    display: inline-block;
+    padding: 8px 20px;
+    background: linear-gradient(135deg, #ffa500, #ff6b6b);
+    color: white;
+    border-radius: 20px;
+    font-size: 0.9em;
+    font-weight: bold;
+    box-shadow: 0 3px 10px rgba(255, 107, 107, 0.3);
+}
+
+.navigation {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.navigation button {
+    background: linear-gradient(135deg, #ff0095, #ff7300);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+.navigation button:hover:not(:disabled) {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(255, 0, 0, 0.4);
+}
+
+.navigation button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+#pageNumber {
+    font-weight: bold;
+    color: #555;
+    min-width: 100px;
+    text-align: center;
+}
+
+.close-book {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: linear-gradient(135deg, #ff0095, #ff7300);
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+.close-book:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+}
+
+@media (max-width: 950px) {
+    .book {
+        width: 100%;
+        max-width: 600px;
+        height: auto;
+        flex-direction: column;
+    }
+    
+    .page {
+        width: 100%;
+        min-height: 400px;
+    }
+    
+    .page-left {
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+        border-radius: 10px 10px 0 0;
+    }
+    
+    .page-right {
+        border-radius: 0 0 10px 10px;
+    }
+}
+.home-button {
+    background: linear-gradient(135deg, #ff0095, #ff7300);
+    color: white;
+    border: none;
+    padding: 12px 35px;
+    font-size: 1.1em;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    box-shadow: 0 5px 15px rgba(255, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+.home-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 25px rgba(255, 0, 0, 0.4);
+}

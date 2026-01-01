@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Productos</title>
+    <link rel="stylesheet" href="/css/catalogue.css">
+    <script defer src="/js/catalogue.js"></script>
+</head>
+<body>
+    <div class="book-container">
+        <div class="book-cover">
+            <h1>Catálogo de Productos</h1>
+            <p class="subtitle">Diseños 100% Personalizables</p>
+            <button class="home-button" onclick="goToHome()">← Volver al Inicio</button>
+            <button class="open-book" onclick="openBook()">Abrir Catálogo</button>
+        </div>
+
+        <div class="book" id="book">
+            <div class="page page-left">
+                <div class="page-content">
+                    <div class="product-card">
+                        <div class="product-image">[Imagen]</div>
+                        <h2>Camisetas</h2>
+                        <p>TEXTO DE CAMISETAS</p>
+                        <span class="badge">100% Personalizable</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="page page-right">
+                <div class="page-content">
+                    <div class="product-card">
+                        <div class="product-image">[Imagen]</div>
+                        <h2>Camisas</h2>
+                        <p>TEXTO DE CAMISAS</p>
+                        <span class="badge">Diseño a tu Gusto</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="page page-left">
+                <div class="page-content">
+                    <div class="product-card">
+                        <div class="product-image">[imagen]</div>
+                        <h2>Chaquetas</h2>
+                        <p>TEXTO DE CHAQUETAS</p>
+                        <span class="badge">Tu Estilo, Tu Diseño</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="page page-right">
+                <div class="page-content">
+                    <div class="product-card">
+                        <div class="product-image">[imagen]</div>
+                        <h2>Gorras</h2>
+                        <p>TEXTO DE GORRAS</p>
+                        <span class="badge">Estampado Exclusivo</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="page page-left">
+                <div class="page-content">
+                    <div class="product-card">
+                        <div class="product-image">[imagen]</div>
+                        <h2>Pantalones</h2>
+                        <p>TEXTO DE PANTALONES/JEANS</p>
+                        <span class="badge">Personalización a tu Gusto</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="page page-right">
+                <div class="page-content">
+                    <div class="product-card">
+                        <div class="product-image">[imagen]</div>
+                        <h2>Llaveros</h2>
+                        <p>TEXTO DE LLAVEROS</p>
+                        <span class="badge">Diseño Unico</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="page page-left">
+                <div class="page-content">
+                    <div class="product-card">
+                        <div class="product-image">[imagen]</div>
+                        <h2>Mugs Mágicos</h2>
+                        <p>TEXTO DE MUGS MAGICOS</p>
+                        <span class="badge">Efecto Termico</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="page page-right">
+                <div class="page-content">
+                    <div class="product-card">
+                        <div class="product-image">[Imagen]</div>
+                        <h2>Mugs Personalizados</h2>
+                        <p>TEXTO DE MUGS PERSONALIZADOS</p>
+                        <span class="badge">Perfecto para Obsequios</span>
+                    </div>
+                </div>
+            </div>
+
+            <button class="close-book" onclick="closeBook()">Cerrar Catálogo</button>
+            <div class="navigation">
+                <button onclick="prevPage()" id="prevBtn">← Anterior</button>
+                <span id="pageNumber">Página 1-2</span>
+                <button onclick="nextPage()" id="nextBtn">Siguiente →</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/catalogue.js"></script>
+</body>
+</html>

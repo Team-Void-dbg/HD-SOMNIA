@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Domicilios</title>
+    <link rel="stylesheet" href="/css/contact_dom.css">
+    <script defer src="/js/domicile.js"></script>
+</head>
+
+<body">
+    <div class="org_panel">
+        <div class="title">
+            <h1>Domicilios</h1>
+        </div>
+        
+        <div class="datetime_display">
+            <h3>Fecha y hora de pedido:</h3>
+            <div class="datetime_content">
+                <div class="date_box">
+                    <span class="date_label">Fecha</span>
+                    <span id="current_date">--/--/----</span>
+                </div>
+                <div class="time_box">
+                    <span class="time_label">Hora</span>
+                    <span id="current_time">--:--:--</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="form_main_container">
+            <form id="domicile_form">
+                <div class="form_input_group">
+                    <label for="person">Persona a cargo</label>
+                    <input type="text" id="person" name="person" required placeholder="Persona que recogerá el pedido">
+                    
+                    <label for="direction">Dirección</label>
+                    <input type="text" id="direction" name="direction" required placeholder="¿A donde quieres que llegue el pedido?">
+                    
+                    <label for="locality">Localidad</label>
+                    <input type="text" id="locality" name="locality" required placeholder="Localidad">
+                    
+                    <label for="neighborhood">Barrio</label>
+                    <input type="text" id="neighborhood" name="neighborhood" required placeholder="Barrio">
+                    
+                    <label for="number_user">Teléfono</label>
+                    <input type="tel" id="number_user" name="number_user" required placeholder="Número de teléfono">
+                </div>
+                
+                <button type="submit" class="submit_button">Siguiente [2/3]</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/scripts.js"></script>
+    <script src="js/domicilios.js"></script>
+</body>
+
+</html>

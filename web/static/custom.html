@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personaliza tu Producto</title>
+    
+    <link rel="stylesheet" href="/css/custom.css">
+    <script defer src="/js/custom.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>PERSONALIZA TU PRODUCTO</h1>
+        
+        <div class="main-content">
+            <div class="left-panel">
+                <div class="section">
+                    <h2>Seleccionar Producto</h2>
+                    <div class="radio-group">
+                        <label class="radio-item">
+                            <input type="radio" name="producto" value="camiseta" checked>
+                            CAMISETA
+                        </label>
+                        <label class="radio-item">
+                            <input type="radio" name="producto" value="camisa">
+                            CAMISA
+                        </label>
+                        <label class="radio-item">
+                            <input type="radio" name="producto" value="pantalon">
+                            PANTALON
+                        </label>
+                        <label class="radio-item">
+                            <input type="radio" name="producto" value="abrigo">
+                            ABRIGO
+                        </label>
+                        <label class="radio-item">
+                            <input type="radio" name="producto" value="gorra">
+                            GORRA
+                        </label>
+                        <label class="radio-item">
+                            <input type="radio" name="producto" value="tasa">
+                            TASA
+                        </label>
+                        <label class="radio-item">
+                            <input type="radio" name="producto" value="llaveros">
+                            LLAVEROS
+                        </label>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2>Escoger Color</h2>
+                    <div class="color-group">
+                        <div class="color-option selected" data-color="#FFFFFF" style="background: white;"></div>
+                        <div class="color-option" data-color="#FF0000" style="background: red;"></div>
+                        <div class="color-option" data-color="#FFFF00" style="background: yellow;"></div>
+                        <div class="color-option" data-color="#00FFFF" style="background: cyan;"></div>
+                        <div class="color-option" data-color="#FF00FF" style="background: magenta;"></div>
+                        <div class="color-option" data-color="#0000FF" style="background: blue;"></div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2>Importar Estampado</h2>
+                    <input type="file" id="fileInput" accept="image/*">
+                    <button class="upload-btn" onclick="document.getElementById('fileInput').click()">
+                        Seleccionar Archivo
+                    </button>
+                    <button class="next-btn" onclick="window.location.href='domicile.html'">
+                        Siguiente 1/3
+                    </button>
+                </div>
+            </div>
+
+            <div class="right-panel">
+                <div class="preview-section">
+                    <h2>VISTA PREVIA</h2>
+                    <div class="preview-container" id="previewContainer">
+                        <div class="shirt-canvas">
+                            <img class="shirt-img" id="shirtImg" src="assets/modelos/camiseta-blanca.png" alt="Camiseta">
+                        </div>
+                        <div class="stamp-container" id="stampContainer" style="display: none;">
+                            <img class="stamp-img" id="stampImg" src="" alt="Estampado">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

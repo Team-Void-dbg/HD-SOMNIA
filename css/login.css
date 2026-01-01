@@ -1,0 +1,148 @@
+.form_container {
+    display: flex;
+    height: 100vh;
+}
+
+.form_input_group {
+    margin-bottom: 25px;
+}
+
+.form_box {
+    width: 400px;
+    padding: 40px;
+}
+
+.form_box h2 {
+    color: white;
+    margin-bottom: 30px;
+    font-size: 3em;
+    font-weight: 400;
+}
+
+.form_input_group label {
+    color: rgb(83, 0, 35);
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 3px;
+    font-size: 0.95em;
+    font-weight: 500;
+}
+
+.form_input_group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 1em;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+.form_input_group input:focus {
+    border-color:rgb(255, 0, 76);
+}
+
+.submit_button {
+    width: 100%;
+    padding: 14px;
+    background: none;
+    border: 0.5px solid rgb(255, 0, 76);
+    color: rgb(255, 0, 76);
+    border-radius: 6px;
+    font-size: 1em;
+    font-weight: 500;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.submit_button:hover {
+    border: none;
+    color: rgb(255, 255, 255);
+    transform: translateY(-2px);
+    background: linear-gradient(90deg, rgb(255, 0, 106), rgb(255, 196, 0));
+    box-shadow: 0 5px 15px rgb(255, 0, 0);
+}
+
+.submit_button:active {
+    transform: translateY(0);
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.left_side {
+    flex: 1;
+    background: url("../assets/bg_hdsomnia.webp"), linear-gradient(90deg, rgb(165, 0, 22), rgb(0, 180, 54));
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    
+}
+
+.left_content {
+    text-align: center;
+    padding: 40px;
+}
+
+.left_content h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+.left_content p {
+    font-size: 1.2em;
+    opacity: 0.8;
+    line-height: 1.6;
+}
+
+.right_side {
+    flex: 1;
+    background: linear-gradient(90deg, rgb(255, 0, 106), rgb(255, 196, 0));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.forgot_password {
+    text-align: right;
+    margin-bottom: 25px;
+}
+
+.forgot_password a {
+    color: #2c0000;
+    font-size: 0.9em;
+    transition: color 0.3s ease;
+}
+
+.forgot_password a:hover {
+    color: #ffffff;
+}
+
+.signup_link {
+    text-align: center;
+    margin-top: 25px;
+    color: white;
+    font-size: 0.95em;
+}
+
+.signup_link a {
+    color: rgb(71, 0, 0);
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.signup_link a:hover {
+    color: rgb(255, 208, 0);
+}
